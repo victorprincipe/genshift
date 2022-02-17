@@ -1,0 +1,189 @@
+frames loaded and prepared
+considering chemical species 1
+loaded shielding model
+split frames into 13 batches
+features evaluated
+models evaluated
+predicted for batch 1
+predictions stored for batch 1
+features evaluated
+models evaluated
+predicted for batch 2
+predictions stored for batch 2
+features evaluated
+models evaluated
+predicted for batch 3
+predictions stored for batch 3
+features evaluated
+models evaluated
+predicted for batch 4
+predictions stored for batch 4
+features evaluated
+models evaluated
+predicted for batch 5
+predictions stored for batch 5
+features evaluated
+models evaluated
+predicted for batch 6
+predictions stored for batch 6
+features evaluated
+models evaluated
+predicted for batch 7
+predictions stored for batch 7
+features evaluated
+models evaluated
+predicted for batch 8
+predictions stored for batch 8
+features evaluated
+models evaluated
+predicted for batch 9
+predictions stored for batch 9
+features evaluated
+models evaluated
+predicted for batch 10
+predictions stored for batch 10
+features evaluated
+models evaluated
+predicted for batch 11
+predictions stored for batch 11
+features evaluated
+models evaluated
+predicted for batch 12
+predictions stored for batch 12
+features evaluated
+models evaluated
+predicted for batch 13
+predictions stored for batch 13
+considering chemical species 6
+loaded shielding model
+split frames into 5 batches
+features evaluated
+models evaluated
+predicted for batch 1
+predictions stored for batch 1
+features evaluated
+models evaluated
+predicted for batch 2
+predictions stored for batch 2
+features evaluated
+models evaluated
+predicted for batch 3
+predictions stored for batch 3
+features evaluated
+models evaluated
+predicted for batch 4
+predictions stored for batch 4
+features evaluated
+models evaluated
+predicted for batch 5
+predictions stored for batch 5
+considering chemical species 7
+loaded shielding model
+split frames into 3 batches
+features evaluated
+models evaluated
+predicted for batch 1
+predictions stored for batch 1
+features evaluated
+models evaluated
+predicted for batch 2
+predictions stored for batch 2
+features evaluated
+models evaluated
+predicted for batch 3
+predictions stored for batch 3
+considering chemical species 8
+Traceback (most recent call last):
+  File "calculate_shieldings_glycine.py", line 58, in <module>
+    with open('/local/home/local/Documents/principev/edgar_reconstruction/Shielding_models/'+compound+'_'+str(sp)+'.pickle','rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/local/home/local/Documents/principev/edgar_reconstruction/Shielding_models/glycine_8.pickle'
+Frames to read: 8746
+Atoms per frame: 30
+Current frame: 100
+Current frame: 200
+Current frame: 300
+Current frame: 400
+Current frame: 500
+Current frame: 600
+Current frame: 700
+Current frame: 800
+Current frame: 900
+Current frame: 1000
+Current frame: 1100
+Current frame: 1200
+Current frame: 1300
+Current frame: 1400
+Current frame: 1500
+Current frame: 1600
+Current frame: 1700
+Current frame: 1800
+Current frame: 1900
+Current frame: 2000
+Current frame: 2100
+Current frame: 2200
+Current frame: 2300
+Current frame: 2400
+Current frame: 2500
+Current frame: 2600
+Current frame: 2700
+Current frame: 2800
+Current frame: 2900
+Current frame: 3000
+Current frame: 3100
+Current frame: 3200
+Current frame: 3300
+Current frame: 3400
+Current frame: 3500
+Current frame: 3600
+Current frame: 3700
+Current frame: 3800
+Current frame: 3900
+Current frame: 4000
+Current frame: 4100
+Current frame: 4200
+Current frame: 4300
+Current frame: 4400
+Current frame: 4500
+Current frame: 4600
+Current frame: 4700
+Current frame: 4800
+Current frame: 4900
+Current frame: 5000
+Current frame: 5100
+Current frame: 5200
+Current frame: 5300
+Current frame: 5400
+Current frame: 5500
+Current frame: 5600
+Current frame: 5700
+Current frame: 5800
+Current frame: 5900
+Current frame: 6000
+Current frame: 6100
+Current frame: 6200
+Current frame: 6300
+Current frame: 6400
+Current frame: 6500
+Current frame: 6600
+Current frame: 6700
+Current frame: 6800
+Current frame: 6900
+Current frame: 7000
+Current frame: 7100
+Current frame: 7200
+Current frame: 7300
+Current frame: 7400
+Current frame: 7500
+Current frame: 7600
+Current frame: 7700
+Current frame: 7800
+Current frame: 7900
+Current frame: 8000
+Current frame: 8100
+Current frame: 8200
+Current frame: 8300
+Current frame: 8400
+Current frame: 8500
+Current frame: 8600
+Current frame: 8700
+Shieldings and errors saved as: shieldings.csv
