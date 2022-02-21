@@ -49,28 +49,33 @@ def get_shieldings_and_errors(xyz_file, save_filename):
     shieldings_raw=[]
     shielding_errors_raw=[]
     
-    #get chemical shieldings and errors form each frame
-    for i in range(0, all_frames):
-        if i> 0 and i%100==0:
-            print('Current frame:', i)
-        atomss = ase.io.read(xyz_file, index=i)
-        cs = atomss.get_array('CS')
-        shieldings_raw.append(cs)
-        cserr = atomss.get_array('CSerr')
-        shielding_errors_raw.append(cserr)
+    atoms=ase.io.read(xyz_file, index=':')
     
+    #get chemical shieldings and errors form each frame
+    if atoms[0].has('cs_iso')==True:   #check if array is indexed using Matthias's method
+        for i in range(len(atoms)):
+            cs=atoms[i].get_array('cs_iso')
+            shieldings_raw.append(cs)
+    else:
+        for i in range(len(atoms)):
+            cs = atoms[i].get_array('CS')
+            cserr = atoms[i].get_array('CSerr')
+            shieldings_raw.append(cs)
+            shielding_errors_raw.append(cserr)
+
     #create numpy arrays of shieldings and errors
     shieldings=np.array(shieldings_raw)
     shielding_errors=np.array(shielding_errors_raw)
     
     #save shieldings and errors to new CSV
     df_shieldings = pd.DataFrame(shieldings, columns = symbols)
-    
-    df_errors = pd.DataFrame(shielding_errors, columns = error_symbols)
-    
     df_total = df_shieldings
-    for column in df_errors.columns:
-        df_total[column] = df_errors[column]
+    
+    if len(shielding_errors)>0:
+        df_errors = pd.DataFrame(shielding_errors, columns = error_symbols)
+        for column in df_errors.columns:
+            df_total[column] = df_errors[column]
+    
     df_total.to_csv(save_filename+'.csv')
     print('Shieldings and errors saved as: '+save_filename+'.csv')
     
