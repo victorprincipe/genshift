@@ -21,8 +21,15 @@ else:
 
 def trajectory_fig(sim_outfile, percent):
     
-    # Set column headers
-    headers=['Step', 'Time (ps)', 'Pot_component_raw(0)','Pot_component_raw(1)', 'Temperature', 'Conserved']
+    # Get column headers
+    headers = []
+    with  open(sim_outfile,'r') as cmt_file:    # open file
+        for line in cmt_file:    # read each line
+            if line[0] == '#':    # check the first character
+                line = line[21:]    # remove first '#'
+                para = line.split(' :')     # seperate string by ':'
+                if len(para) == 2:
+                    headers.append(para[0])
     
     # Read simulation file
     sim= pd.read_csv(sim_outfile, sep=' ', skipinitialspace=True, comment='#', usecols=[0,1,2,3,4,5], names=headers)
@@ -31,7 +38,7 @@ def trajectory_fig(sim_outfile, percent):
     frames=int(percent*len(sim)/100)
 
     #Create plots
-    plotted=sim.iloc[0:frames].plot(kind='line', subplots=True, x='Step', figsize=(10,20))
+    plotted=sim.iloc[0:frames].plot(kind='line', subplots=True, x='step', figsize=(10,20))
     fig=plotted[0].get_figure()
     
     #Save plot
