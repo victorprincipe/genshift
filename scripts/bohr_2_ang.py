@@ -4,7 +4,7 @@ from ase.io import read, write
 
 '''
 Usage: python bohr_2_ang.py (xyz file)
-Convert an ASE-formatted xyz trajectory from bohr to angstroms. This is required for Matthias's general shiedling model.
+Convert an ASE-formatted xyz trajectory from bohr to angstroms. This is required for Matthias's general shielding model.
 New file is saved as (old_filename)_ang.xyz
 '''
 
