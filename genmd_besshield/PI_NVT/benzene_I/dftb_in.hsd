@@ -21,20 +21,16 @@ Hamiltonian = DFTB {
 HubbardDerivs = {
     H = -0.1857
     C = -0.1492
-    N = -0.1535
-    O = -0.1575
   }
   MaxAngularMomentum = {
     H = "s"
     C = "p"
-    N = "p"
-    O = "p"
   }
     SCC = Yes
     SCCTolerance = 1e-04
     MaxSCCIterations = 1000
     SlaterKosterFiles = Type2FileNames {
-        Prefix = /local/home/local/Documents/principev/genshift/genmd_besshield/dftb-param/
+        Prefix = ../../dftb-param/
         Separator = "-"
         Suffix = ".skf"
         LowerCaseTypeName = No

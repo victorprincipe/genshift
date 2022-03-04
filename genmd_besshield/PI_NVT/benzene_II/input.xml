@@ -28,7 +28,7 @@
       </dynamics>
     </motion>
     <ensemble>
-      <temperature units="kelvin"> 300 </temperature>
+      <temperature units="kelvin"> 100 </temperature>
     </ensemble>
   </system>
 </simulation>
