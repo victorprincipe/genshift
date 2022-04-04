@@ -1,0 +1,146 @@
+Geometry = GenFormat {
+28  S
+C    O    H
+1      1      0.183294000000000      8.192600000000001      4.858930000000000
+2      1      4.993530000000000      0.573404000000000      0.136820000000000
+3      1      4.849940000000000      3.809600000000000      2.634700000000000
+4      1      0.326884000000000      4.956400000000000      2.361060000000000
+5      1      1.201470000000000      8.482839999999999      3.799860000000000
+6      1      3.975350000000000      0.283156000000000      1.195890000000000
+7      1      3.831770000000000      4.099840000000000      3.693770000000000
+8      1      1.345060000000000      4.666160000000000      1.301980000000000
+9      2      1.191800000000000      0.712443000000000      3.091730000000000
+10     2      3.985030000000000      8.053559999999999      1.904020000000000
+11     2      3.841440000000000      5.095440000000000      4.401900000000000
+12     2      1.335390000000000      3.670560000000000      0.593856000000000
+13     2      2.111160000000000      7.546400000000000      3.710210000000000
+14     2      3.065660000000000      1.219600000000000      1.285540000000000
+15     2      2.922070000000000      3.163400000000000      3.783420000000000
+16     2      2.254750000000000      5.602600000000000      1.212330000000000
+17     3      5.098110000000000      7.299020000000000      4.543160000000000
+18     3      0.078712900000000      1.466980000000000      0.452596000000000
+19     3     -0.064876500000000      2.916020000000000      2.950470000000000
+20     3      5.241700000000000      5.849980000000000      2.045280000000000
+21     3      1.012440000000000      7.896330000000000      0.762479000000000
+22     3      4.164390000000000      0.869670000000000      4.233270000000000
+23     3      4.307980000000000      3.513330000000000      1.735400000000000
+24     3      0.868847000000000      5.252670000000000      3.260360000000000
+25     3      2.778200000000000      7.729700000000000      2.988650000000000
+26     3      2.398630000000000      1.036300000000000      2.007110000000000
+27     3      2.255040000000000      3.346700000000000      4.504980000000000
+28     3      2.921790000000000      5.419300000000000      0.490771000000000
+0.000000000000000      0.000000000000000      0.000000000000000
+5.464000000000000      0.000000000000000      0.000000000000000
+0.000000000000000      8.766000000000000      0.000000000000000
+-0.287178471960759      0.000000000000000      4.995752648524772
+}
+Driver = Socket {
+  File = "dftb-nvt-sb"
+  MaxSteps = -1
+  Protocol = i-PI {}
+  Prefix = "/tmp/ipi_"
+  Verbosity = 0
+}
+Hamiltonian = DFTB {
+  Charge = +0
+  Dispersion = DftD3 {
+    Damping = BeckeJohnson {
+      a1 = 0.57189999999999996
+      a2 = 3.6017000000000001
+    }
+    s6 = 1.0000000000000000
+    s8 = 0.58830000000000005
+    cutoff = 94.868329805051374
+    cutoffcn = 40.000000000000000
+    threebody = No
+    hhrepulsion = No
+  }
+  Solver = RelativelyRobust {}
+  HubbardDerivs = {
+    H = -0.1857
+    C = -0.1492
+    O = -0.1575
+  }
+  MaxAngularMomentum = {
+    H = "s"
+    C = "p"
+    O = "p"
+  }
+  SCC = Yes
+  SCCTolerance = 1e-04
+  MaxSCCIterations = 1000
+  SlaterKosterFiles = Type2FileNames {
+    Prefix = ../../dftb-param/
+    Separator = "-"
+    Suffix = ".skf"
+    LowerCaseTypeName = No
+  }
+  ThirdOrderFull = Yes
+  Filling = Fermi {
+    Temperature [K] = 300
+    IndependentKFilling = No
+  }
+  KPointsAndWeights = {
+4 3 4 1.0
+  }
+  Differentiation = FiniteDiff {
+    Delta = 1.0000000000000000E-002
+  }
+  HCorrection = Damping {
+    Exponent = 4.0000000000000000
+  }
+  PolynomialRepulsive = {}
+  ShellResolvedSCC = No
+  OldSKInterpolation = No
+  RangeSeparated = None {}
+  ReadInitialCharges = No
+  InitialCharges = {}
+  EwaldParameter = 0.0000000000000000
+  EwaldTolerance = 1.0000000000000001E-009
+  ConvergentSCCOnly = Yes
+  SpinPolarisation = {}
+  ElectricField = {}
+  OnSiteCorrection = {}
+  Solvation = {}
+  Electrostatics = GammaFunctional {}
+  ThirdOrder = No
+  ForceEvaluation = "Traditional"
+  Mixer = Broyden {
+    MixingParameter = 0.20000000000000001
+    InverseJacobiWeight = 1.0000000000000000E-002
+    MinimalWeight = 1.0000000000000000
+    MaximalWeight = 100000.00000000000
+    WeightFactor = 1.0000000000000000E-002
+  }
+}
+Analysis = {
+  CalculateForces = Yes
+  MullikenAnalysis = No
+  WriteBandOut = No
+  ProjectStates = {}
+  WriteEigenvectors = No
+  AtomResolvedEnergies = No
+  EigenvectorsAsText = No
+}
+Options = {
+  WriteResultsTag = No
+  WriteDetailedOut = No
+  WriteAutotestTag = No
+  WriteDetailedXML = No
+  RestartFrequency = 20
+  RandomSeed = 0
+  WriteHS = No
+  WriteRealHS = No
+  MinimiseMemoryUsage = No
+  ShowFoldedCoords = No
+  TimingVerbosity = 1
+  WriteChargesAsText = No
+}
+ParserOptions = {
+  ParserVersion = 10
+  WriteHSDInput = Yes
+  StopAfterParsing = No
+  IgnoreUnprocessedNodes = No
+}
+Reks = None {}
+ExcitedState = {}
