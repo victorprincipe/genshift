@@ -7,9 +7,7 @@ import matplotlib.pyplot as plt
 Usage: python trajectory_fig.py (simulation.out file) (percentage of frames to use)
 Takes a simulation.out file and produces plots of various properties over the course of the trajectory, saved as 'traj_properties.png'.
 You can pass a second argument, which is equal to the percentage of frames (from first frame) that will be used for the plot (default = 100)
-NOTE: it is assumed that the simulation.out file contains the columns in the 'header' variable in the same order.
-If this isn't the case, please change the headers line above, and also make sure that the usecols option
-below reflects the number of columns that are present.
+NOTE: please make sure that the usecols option below, during reading of simulaiton file, reflects the number of columns that are present.
 '''
 
 analyse = sys.argv[1]
