@@ -5,8 +5,8 @@
      <trajectory stride='10' filename='frc'> forces </trajectory>
      <checkpoint stride='1000' overwrite='False'/>
   </output>
-  <total_steps>100000</total_steps>
-  <total_time>172000</total_time>
+  <total_steps>80000</total_steps>
+  <total_time>250000</total_time>
   <prng><seed>4441</seed></prng>
   <ffsocket mode="unix" name="driver-lmp-base" pbc="True"> <address>lmp-base-gb</address> </ffsocket>
   <ffsocket mode="unix" name="driver-lmp-delta" pbc="True"> <address>lmp-delta-gb</address> </ffsocket>

@@ -55,7 +55,7 @@ print('frames loaded and prepared')
 for sp in species:
     print('considering chemical species',sp)
     # load ShiftML model
-    with open('/local/home/local/Documents/principev/edgar_reconstruction/Shielding_models/'+compound+'_'+str(sp)+'.pickle','rb') as f:
+    with open('/home/vprincip/projects/genshift/shielding_models/'+compound+'_'+str(sp)+'.pickle','rb') as f:
         [soap,kern,feat,weig,alpha] = pickle.load(f)
     print('loaded shielding model')
     # mask all atomic centers except for species at hand

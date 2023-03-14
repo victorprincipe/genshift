@@ -1,1 +1,0 @@
-Note that for glycine_alpha and succinic_alpha, Edgar's input files have always been used, and so those results can be found in their corresponding folders in ../PI_NVT/

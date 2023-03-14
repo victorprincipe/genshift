@@ -44,7 +44,7 @@ HubbardDerivs = {
         Temperature [K] = 300
     }
     KPointsAndWeights = { # how many
-        4 2 4 1.0
+        5 2 4 1.0
     }
 }
 Analysis = {

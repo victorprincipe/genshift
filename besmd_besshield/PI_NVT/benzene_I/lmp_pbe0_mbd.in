@@ -14,7 +14,7 @@ variable mass1           equal  1.0080                                          
 variable mass2           equal  12.0107                                                 # mass for element 2 (C)  (g/mol)
 variable mass3           equal  15.9994                                                 # mass for element 3 (O)  (g/mol)
 variable mass4           equal  35.453                                                  # mass for element 4 (Cl)  (g/mol)
-variable runnerDir       string "../../../NN_potentials/benzene/AIMS_PBE0_MBD/"         # directory containing RuNNer files
+variable runnerDir       string "../../../nn_potentials/benzene/AIMS_PBE0_MBD/"         # directory containing RuNNer files
 # set initial velocity distribution
 variable initTemp        equal  333.0                                                   # initial temperature (K)
 variable velSeed         equal  4928459                                                 # seed for random number generator

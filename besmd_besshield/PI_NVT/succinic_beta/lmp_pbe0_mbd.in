@@ -13,7 +13,7 @@ variable runnerCutoff    equal  8.466835984                                     
 variable mass1           equal  1.0080                                                  # mass for element 1 (H) (g/mol)
 variable mass2           equal  12.0107                                                 # mass for element 2 (C)  (g/mol)
 variable mass3           equal  15.9994                                                 # mass for element 3 (O)  (g/mol)
-variable runnerDir       string "../../../NN_potentials/succinic/AIMS_PBE0_MBD/"        # directory containing RuNNer files
+variable runnerDir       string "../../../nn_potentials/succinic/AIMS_PBE0_MBD/"        # directory containing RuNNer files
 # set initial velocity distribution
 variable initTemp        equal  333.0                                                   # initial temperature (K)
 variable velSeed         equal  4928459                                                 # seed for random number generator

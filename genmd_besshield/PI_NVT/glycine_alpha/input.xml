@@ -5,7 +5,7 @@
      <trajectory stride='10' filename='frc'> forces </trajectory>
      <checkpoint stride='1000' overwrite='False'/>
   </output>
-  <total_steps>100000</total_steps>
+  <total_steps>80000</total_steps>
   <total_time>300000</total_time>
   <prng><seed>4441</seed></prng>
   <ffsocket mode="unix" name="driver-dftb" pbc="True"> <address>dftb-nvt-ga</address> </ffsocket>
